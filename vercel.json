@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "client/build",
+  "framework": "create-react-app",
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_CONTRACT_ADDRESS": "@contract_address",
+    "REACT_APP_NETWORK_NAME": "@network_name",
+    "REACT_APP_CHAIN_ID": "@chain_id"
+  }
+}

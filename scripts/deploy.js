@@ -19,7 +19,7 @@ async function main() {
   console.log("✅ Certificate contract deployed to:", address);
 
   // ✅ Save ABI + address to frontend
-  const contractsDir = path.join(__dirname, "..", "frontend", "src", "abi");
+  const contractsDir = path.join(__dirname, "..", "client", "src", "abi");
 
   if (!fs.existsSync(contractsDir)) {
     fs.mkdirSync(contractsDir, { recursive: true });
@@ -38,7 +38,7 @@ async function main() {
     JSON.stringify(data, null, 2)
   );
 
-  console.log("📁 ABI + address saved to frontend/src/abi/CertificateABI.json");
+  console.log("📁 ABI + address saved to client/src/abi/CertificateABI.json");
 }
 
 // Run
